@@ -1,0 +1,46 @@
+<html>
+
+<body>
+    <script>
+        // 결과를 예상해 봅시다 , 중첩 for문 아님.
+
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+        // 출력창: 1 2 3 4 5
+
+        let plus = "";
+        for (let i = 1; i <= 5; i++) {
+            plus = plus + i;
+            console.log(plus);
+        }
+        // plus ("") + 1 = "1" / plus가 "1"로 출력되면 전체 plus가 "1" 바뀜 (그림자 분신술 변수 전체가 바뀐다.)
+        // plus("1") + 2 = "12"      <- "1"로 변한 plus에 2더함
+        // plus("12") + 3 = "123"
+        // plus("123") + 4 = "1234"
+        // plus("1234") + 5 = "12345"
+
+
+        let plus = 0;
+        for (let i = 1; i <= 5; i++) {
+            plus = plus + i;
+            console.log(plus);
+        }
+        //
+    </script>
+</body>
+
+</html>
+
+<!-- 
+ 1
+ 12
+ 123
+ 1234
+ 12345           
+    
+    i = "" + i;
+            console.log(i);
+            "1" "2" "3" "4" "5"
+  
+ -->
