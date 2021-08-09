@@ -1,0 +1,66 @@
+<html>
+
+<body>
+    <script>
+        const calculator = {
+            playCalculator: (num1, num2, opt) => {
+                let result;
+                switch (opt) {
+                    case "+":
+                        result = num1 + num2;
+                        savingPlatform.showDisplay(result);
+                        break;
+
+                    case "-":
+                        result = num1 - num2;
+                        savingPlatform.showDisplay(result);
+                        break;
+
+                    case "*":
+                        result = num1 * num2;
+                        savingPlatform.showDisplay(result);
+                        break;
+
+                    case "/":
+                        result = num1 / num2;
+                        savingPlatform.showDisplay(result);
+                        break;
+                }
+                return;
+            }
+        };
+
+        const numberInput = {
+            userInput: () => {
+                let numberInput1 = +prompt("숫자를 입력해 주세요.");
+                let numberInput2 = +prompt("숫자를 하나더 입력해 주세요.");
+                let operatorInput = prompt("연산자를 골라 주세요.");
+                savingPlatform.goCalculator(numberInput1, numberInput2, operatorInput);
+            }
+        };
+
+        const savingPlatform = {
+            goCalculator: (num1, num2, opt) => {
+                calculator.playCalculator(num1, num2, opt);
+            },
+            showDisplay: (result) => {
+                disPlaySection.showResult(result);
+            }
+        };
+
+        const disPlaySection = {
+            showResult: (result) => {
+                alert(`계산된 결과는 ${result} 입니다.`)
+            }
+        };
+
+
+
+        const powerOn = confirm("계산기를 킬까요?")
+        if (powerOn === true) {
+            numberInput.userInput();
+        }
+    </script>
+</body>
+
+</html>

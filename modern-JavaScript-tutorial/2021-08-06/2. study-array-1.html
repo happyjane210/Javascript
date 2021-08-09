@@ -1,0 +1,73 @@
+<!-- array , 배열 -->
+
+<html>
+
+<body>
+    <script>
+        //            변수 0    변수 1     변수 2
+        let book = [1, 2, 3];
+        console.log(book[0]);
+        console.log(book[2]);
+        console.log(book[2], book[0]);
+        console.log(book[1], book[2], book[0]);
+
+        // 변경
+        book[2] = "social";
+        console.log(book[2]);
+
+        //추가
+        book[3] = "paper";
+        console.log(book[3]);
+
+        // 배열의 101번째 자리에 숫자 5를 넣는다.
+        book[100] = 5
+
+        // arr.length : 배열 요소 개수만큼 자동으로 숫자 넣어주는 프로퍼티
+        for (let i = 0; i < arr.length; i++) {
+            alert(arr[i])
+        }
+
+        // 배열 요소를 대상으로 반복 작업을 수행합니다.
+        let fruits = ["사과", "오렌지", "자두"];
+        for (let fruit of fruits) {
+            alert(fruit);
+        } // fruit : 임의의 문자   => 사과, 오렌지, 자두
+
+
+        // length 프로퍼티
+        let matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        alert(matrix[1][1]); // 5, 중심에 있는 요소 // 3차열가능ㅋㅋ??
+        // 0번부터 셈, [1] => 두번째 줄 / [1] => 두번째 중 안에 두번째 문자
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+
+    배열은 변수의 집합
+    배열은 모든 데이터 타입 가능, 함수, 객체object, 함수function, 문자열, 숫자, 불린
+    배열 꺼내오려고 할때 각각 데이터 타입에 맞게 호출해야함.
+
+    큐 queue: (선입선출)들어간 순서대로 나옴
+
+    push: 뒤에다가 배를 추가 => 사과, 오렌지 + 배
+    pop: (후입선출) 끝에서 부터 꺼내서 띄우고 지워버림 ex) 사과, 배, 오렌지  => 사과, 배  => 사과
+
+
+    shift : 맨 앞에 요소를 뺀다
+    unshift : 맨 앞에 요소를 추가한다.
+     * push, unshift 한꺼번에 여러개 요소 넣을 수 있음
+
+     * shift, unshift : 앞에 요소 (추가/제거)하면 뒤의 요소가 한칸씩 (뒤/앞으)로 밀려나는 시간이 걸리기 때문에
+                        시간이 많이 걸린다
+     * pop, push : 뒤에 추가, 제거 하면 앞 요소에 영향이 없어서 빠르게 처리됨
+    
+
+
+ -->
