@@ -1,0 +1,45 @@
+let arr = [5, 1, 3, 7, 9, 2, 4];
+console.log(arr);
+
+function quickSort(arr) {
+    // 재귀함수형 문제해결방식일 경우에는 더 이상 함수 호출을 하지 않을 조건 필요
+    // 배열크기가 0이면, 분할 필요가 없음
+    if (arr.length == 0) {
+        return []; //배열이 0칸이면 빈배열을 돌려준다 
+    }
+
+    let lt = [];  // 작은쪽 그룹을 저장할 배열
+    let gt = [];  // 큰쪽 그룹을 저장할 배열
+    let pivot = arr[0]; // 피봇을 선택, 배열의 첫번째 요소를 선택
+
+    // 피봇 이후부터 마지막 요소까지 탐색함
+    for (let i = 1; i < arr.length; i++) {
+        // 피봇 값 보다 작다면
+        if (arr[i] < pivot) {
+            lt.push(arr[i]);  // 작은쪽 그룹 배열에 추가
+        } else {
+            gt.push(arr[i]);  // 큰쪽 배열에 추가
+        }
+    }
+
+    // 현재 실행 함수의 배열 구조
+    console.log(`${lt},[${pivot}],${gt}`);
+
+    // 작은쪽 그룹과 피벗, 큰쪽 그룹을 합침
+    //  -> 분할된 영역에 대해서 다시 좌우분할하고 합치는 알고리즘을 실행
+    return quickSort(lt).concat(pivot, quickSort(gt));
+
+    // quicksort: 
+    // 피벗을 기준으로 좌우 분할 후 합침, 이것을 분할된 배열에도 적용
+    // 배열크기가 0일 때는 빈 배열을 반환
+
+    // 시간복잡도
+    // O(n.log.n)
+
+    // 공간복잡도가 높아짐 -> 메모리 공간을 더 많이 사용함
+}
+
+
+// 정렬된 배열을 반환해서 대입
+arr = quickSort(arr);
+console.log(arr);
