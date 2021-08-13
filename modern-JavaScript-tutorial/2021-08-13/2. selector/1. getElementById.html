@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+
+<body>
+    <div id="elem">
+        <div id="elem-content">Element</div>
+    </div>
+
+    <script>
+        // id 는 중복되면 안됨
+        // getElementById(' ')  요소 끌고오기
+        let elemmm = document.getElementById('elem');
+        // 배경색 변경
+        elemmm.style.background = 'pink';
+    </script>
+
+    <script>
+        // id 직접 호출 방법, 잘안씀.
+        elem.style.background = "red";
+        window['elem-content'].style.background = "blue";
+        // elem / elem-content 상위 아이디 참조할수있음
+        // 하위 아이디 호출 방법  window['elem-content']
+    </script>
+
+    <script>
+        // 같은 id로 변수 선언하면 id 는 무효해짐
+        let elem = 1000;
+        console.log(elem);
+    </script>
+</body>
+
+</html>

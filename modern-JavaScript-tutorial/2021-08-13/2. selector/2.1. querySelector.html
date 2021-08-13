@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+</head>
+
+<body>
+    <div>영역1</div>
+    <div>영역2</div>
+
+    <ul id="list">
+        <li>1-1</li>
+        <li>1-2</li>
+    </ul>
+    <ul>
+        <li class="item">2-1</li>
+        <li class="item">2-2</li>
+    </ul>
+    <ol>
+        <li>3-1</li>
+        <li>3-2</li>
+    </ol>
+
+    <input type="text">
+    <input type="checkbox">
+
+
+    <script>
+        // document의 하위요소중 첫번째 div 태그
+        const div = document.querySelector('div');
+        //console.log(div);
+
+        // documetn 의 하위요소중 모든 div 태그
+        const divList = document.querySelectorAll('div');
+        //console.log(divList);
+
+        // id가 list인 요소의 li태그 자식들
+        const liList = document.querySelectorAll('#list>li');
+        console.log(liList);
+
+        // id 선택자
+        const ul = document.querySelector("#list");
+        console.log(ul);
+
+        // document외에도 올수있음 (요소).querySelector
+        const liList2 = ul.querySelectorAll('li:last-child');
+        console.log(liList2);
+
+        /*---------------------------------------------*/
+
+        // class 선택자
+        const clali = document.querySelectorAll('.item');
+        console.log(clali);
+
+        // 후손>자손 선택자
+        const olol = document.querySelectorAll("ol>li");
+
+        /*---------------------------------------------*/
+        //속성 선택자(attribute seletor)
+        // 태그[속성명=속성값]  : 해당태그에 해당 속성이 있는 요소선택
+        const text = document.querySelector('input[type="text"]');
+        const chk = document.querySelector('input[type="checkbox"]');
+        console.log(text);
+        console.log(chk);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsBy</title>
+</head>
+
+<body>
+    querySelectorAll : 정적임, 한번 반환하면 그 값을 변형시키지 않음. 위로만 탐색함
+    getElementsBy : 동적임, 밑에 있는 테그라도 변화가 있으면 반영됨
+
+    <div>영역1</div>
+    <div>영역2</div>
+
+    <ul id="list">
+        <li>1-1</li>
+        <li>1-2</li>
+    </ul>
+    <ul>
+        <li class="item">2-1</li>
+        <li class="item">2-2</li>
+    </ul>
+    <ol>
+        <li>3-1</li>
+        <li>3-2</li>
+    </ol>
+
+    <input type="text">
+    <input type="checkbox">
+
+
+
+    <script>
+        // 모든 디브태그 호출
+        let tag = document.getElementsByTagName('div');
+        console.log(tag);
+
+        // 모든태그 호출
+        let allTag = document.getElementsByTagName('*');
+        console.log(allTag);
+
+        let clas = document.getElementsByClassName('item')[1];
+        console.log(clas);
+    </script>
+</body>
+
+</html>
