@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    안녕하세요
+    <!-- 주석입니다. -->
+
+    <script>
+        // innerHTML 은 요소에만 사용가능(태그)
+        // text, comment 노드는 nodeValue/data  가 innerHTML이랑 같은 역할
+        let text = document.body.firstChild;
+        console.log(text.data);  //안녕하세요
+        console.log(text.nodeValue);  //안녕하세요
+        text.nodeValue = "안녕히계세요";
+        console.log(text.nodeValue);  //안녕히계세요  text수정
+
+
+        let comment = text.nextSibling;
+        console.log(comment.data); //주석입니다.
+        console.log(comment.nodeValue); //주석입니다.
+        comment.data = "이것은 주석이 아닙니다.";
+        console.log(comment.data);  //이것은 주석이 아닙니다.   comment 수정
+
+
+    </script>
+</body>
+
+</html>

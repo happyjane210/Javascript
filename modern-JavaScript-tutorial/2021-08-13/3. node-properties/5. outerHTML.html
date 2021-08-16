@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <label for="age">
+        <input type="text" value="age">
+        <input type="text" value="name">
+        <input type="text" value="phone">
+        <input type="submit" value="confirm">
+    </label>
+
+    <p>p tag</p>
+    <div>div tag</div>
+
+    <script>
+        // HTML의 전체 요소가 담겨있음.
+        console.log(document.body.outerHTML);
+
+        let div = document.querySelector('div');
+        div.outerHTML = '<p>새로운 p테그</p>';
+
+        // 화면에 보이는건 새로운 p테그 콘솔은 아래
+        console.log(div.outerHTML);  //<div>div tag</div>
+
+        console.log(document.body.outerHTML);
+
+        // html 겉 화면에서 보이기엔 바뀌어 보이지만,
+        // 테그 내부를 들여다보면 그대로이다. 본질을 바꾸지는 않는다.
+        // 바꾸는 것은 innerHTML
+
+    </script>
+</body>
+
+</html>

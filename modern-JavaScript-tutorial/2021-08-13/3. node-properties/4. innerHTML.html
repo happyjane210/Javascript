@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <p>p 태그</p>
+    <div>div 태그</div>
+
+    <script>
+        console.log(document.body.innerHTML); // 내용 읽기
+        document.body.firstElementChild.innerHTML = '새로운 BODY!'; // 교체
+
+        // 추가가 아니라
+        // 1. 원래 있던 내용지우고
+        // 2. 원래있던 내용 + 새로운 내용   <= 이걸 새로 씀
+        // 완전히 기존 내용 삭제 후 다시 쓰는거기 때문에 모든것이 재로딩됨.
+        //(이미지나 내용이 많으면 버벅임)
+        document.body.innerHTML += "<div>안녕하세요!</div>";
+        document.body.innerHTML += "잘 지내죠?";  // += 는 아래와 같다.
+        document.body.innerHTML = document.body.innerHTML + "<br>요즘 어때요?";
+
+
+    </script>
+
+</body>
+
+</html>

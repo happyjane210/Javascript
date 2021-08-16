@@ -1,0 +1,20 @@
+<html>
+
+<body>
+    nodeName : 모든 node에 있음 <br>
+    tagName : 요소, 테그에만 존재함 - Element 클래스에서 나온것. <br>
+    <script>
+        console.log(document.body.nodeName); //BODY
+        console.log(document.body.tagName);  //BODY
+
+        // text 노드로 두 프로퍼티 비교
+        console.log(document.body.firstChild.tagName);  //undefined
+        console.log(document.body.firstChild.nodeName); //#text
+
+        // 문서 노드로 비교
+        console.log(document.tagName);      //undefined
+        console.log(document.nodeName);     //#document
+    </script>
+</body>
+
+</html>

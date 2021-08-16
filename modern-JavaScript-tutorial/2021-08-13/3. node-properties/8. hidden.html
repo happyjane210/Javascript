@@ -1,0 +1,50 @@
+<html>
+
+<body>
+    hidden 과 태그속성 style="display:none" 같음
+    <div>아래 두 div를 숨겨봅시다</div>
+    <div hidden>html에서 hidden 속성 사용</div>
+    <div id="hihi">자바스크립트에서 hidden 프로퍼티 사용</div>
+
+    <div id="twinkle">깜빡깜빡 깜빡이는</div>
+    <div id="color">색이 바뀌는</div>
+
+    =============
+
+    <input type="text" id="elemmm" value="valueee">
+
+    =========================
+
+    <a href="https://blog.naver.com/jjoon0210"> naver blog </a>
+    <script>
+
+
+        //class 사용시 호출
+        //let hi = document.querySelector(".hihi");
+        //hi.hidden = true;
+
+        // id 사용시 호출
+        hihi.hidden = true;
+        console.log(document.body.outerHTML);
+
+        //setInterval(() => twinkle.hidden = !twinkle.hidden, 1000);
+
+
+        let colorchange = document.body.querySelector("#color");
+        setTimeout(() => colorchange.style.background = "red", 1000);
+
+        // ===============================================
+
+        let inputt = document.body.querySelector("input");
+        console.log(inputt.type);   //text
+        console.log(inputt.id);     //elemmm
+        console.log(inputt.value);  //valueee
+
+        //===================================
+
+        let anchor = document.body.querySelector("a");
+        console.log(anchor.href);   //https://blog.naver.com/jjoon0210
+    </script>
+</body>
+
+</html>

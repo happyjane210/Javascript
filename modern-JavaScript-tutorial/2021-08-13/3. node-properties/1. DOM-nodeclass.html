@@ -1,0 +1,23 @@
+<html>
+
+<body>
+
+    <div>a</div>
+
+    <script>
+        // 돔 노드 클래스 이름 확인 방법  대상.constructor.name
+        console.log(document.body.constructor.name);
+        alert(document.body)
+        // 객체끼리 상속여부
+        console.log(document.body instanceof HTMLBodyElement);
+        console.log(document.body instanceof HTMLElement);
+        console.log(document.body instanceof Element);
+        console.log(document.body instanceof Node);
+        console.log(document.body instanceof EventTarget);
+
+        console.log(Element);  // 돔트리 위치 출력
+        console.dir(Element);  // 객체 취급 출력 (리스트업)
+    </script>
+</body>
+
+</html>

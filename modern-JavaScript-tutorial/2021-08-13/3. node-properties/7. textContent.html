@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <div id="news">
+        <h1>주요 뉴스!</h1>
+        <p>화성인이 지구를 침공하였습니다!</p>
+    </div>
+
+    <div id="elem1"></div>
+    <div id="elem2"></div>
+
+    <script>
+        console.log(news.textContent);
+        //주요 뉴스! 화성인이 지구를 침공하였습니다!
+        // 태그는 빼고 그 안에 텍스트만 보여줌
+
+        let name = "<b>이주은</b>"
+
+        elem1.innerHTML = name;     //이주은  진한글씨
+        // 테그는 태그 이름으로 인식해서 내용물로 출력
+        elem2.textContent = name;   //<b>이주은</b> 
+        // 테그까지 텍스트로 간주해서 출력
+
+    </script>
+</body>
+
+</html>
