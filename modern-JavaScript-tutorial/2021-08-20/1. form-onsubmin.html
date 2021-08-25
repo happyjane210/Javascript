@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form-onsubmit</title>
+  </head>
+  <body>
+    <form
+      action="https://www.naver.com/"
+      name="searchForm"
+      onsubmit="return checkForm()"
+    >
+      <select name="select" id="select">
+        <option>선택하세요</option>
+        <option>날짜</option>
+        <option>작성자</option>
+      </select>
+      <input type="text" />
+      <input type="submit" value="입력" />
+    </form>
+
+    <script>
+      function checkForm() {
+        let f = document.serchForm;
+        if (f.searchType[0].selected) {
+          alert("검색 항목을 선택하세요");
+          return false;
+        }
+        if (f.seachWord.value == "") {
+          alert("검색어를 입력하세요");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+    false라고 쓰면 submit눌러도 action이 가리키는 곳으로 이동하지 않음.
+    onsubmit = "return false;"
+    onsubmit = "return true;"
+ -->
